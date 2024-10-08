@@ -1,0 +1,17 @@
+{
+  "name": "peddy_pet_adoption_platform",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./input.css -o ./dist/output.css --watch",
+    "minify": "npx tailwindcss -i ./input.css -o ./dist/minify.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "daisyui": "^4.12.12",
+    "tailwindcss": "^3.4.13"
+  }
+}
