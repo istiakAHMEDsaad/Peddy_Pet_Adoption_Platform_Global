@@ -31,31 +31,55 @@ Pets are our best friends, they are our leisure time companions. We thought abou
 
 [Peddy](https://peddy-pet-adoption-platform-assignment-6-es6.surge.sh/)
 
-## APIs - (Programming Hero)
+## Installation
 
-The following APIs are available in Peddy:
+Requirment: [Node js](https://nodejs.org/en/download/package-manager)
 
-1. **Fetch All Pets**
+just install tailwind & daisyui requirment
 
-   - **Endpoint:** [https://openapi.programming-hero.com/api/peddy/pets](https://openapi.programming-hero.com/api/peddy/pets)
-   - **Description:** Retrieves a list of all available pets for adoption. The data includes details like pet name, type, age, and adoption status.
+```bash
+  npm install -D tailwindcss
+  npm i -D daisyui@latest
+```
 
-2. **Fetch Pet Details by ID**
+## API Reference (Programming Hero)
 
-   - **Endpoint:**`https://openapi.programming-hero.com/api/peddy/pet/pet-id`
+#### Fetch All Pets
 
-   - **Example:** [https://openapi.programming-hero.com/api/peddy/pet/1](https://openapi.programming-hero.com/api/peddy/pet/1)
-   - **Description:** Fetches detailed information for a specific pet based on its ID. This can be used to view additional information about the pet such as vacination history, description
+```http
+  https://openapi.programming-hero.com/api/peddy/pets
+```
 
-3. **Fetch All Pet Categories**
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `pets` | `array` | Retrieves a list of all available pets for adoption. The data includes details like pet name, type, age, and adoption status.|
 
-   - **Endpoint:** [https://openapi.programming-hero.com/api/peddy/categories](https://openapi.programming-hero.com/api/peddy/categories)
+#### Fetch Pet Details by ID
 
-   - **Description:** Fetches a list of all pet categories available in the platform, such as dogs, cats, rabbit , bird, etc.
+```http
+  https://openapi.programming-hero.com/api/peddy/pet/1
+```
 
-4. **Fetch Pets by Category**
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `pet-id`      | `string` | Fetches detailed information for a specific pet based on its ID. This can be used to view additional information about the pet such as vacination history, description |
 
-   - **Endpoint:** `https://openapi.programming-hero.com/api/peddy/category/categoryName`
-   - **Example:** [https://openapi.programming-hero.com/api/peddy/category/dog](https://openapi.programming-hero.com/api/peddy/category/dog)
+#### Fetch All Pet Categories
 
-   - **Description:** Fetches data of pets under a specific category, in this case, dogs. This can be used to filter pets based on their category.
+```http
+  https://openapi.programming-hero.com/api/peddy/categories
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `category`      | `string` | Fetches a list of all pet categories available in the platform, such as dogs, cats, rabbit , bird, etc. |
+
+#### Fetch Pets by Category
+
+```http
+  https://openapi.programming-hero.com/api/peddy/category/dog
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `categoryName`      | `string` | Fetches data of pets under a specific category, in this case, dogs. This can be used to filter pets based on their category. |
